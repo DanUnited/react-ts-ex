@@ -1,0 +1,2 @@
+export const RATE_NAME_MAX_LENGTH = 50;
+export const RATE_DESCRIPTION_MAX_LENGTH = 255;

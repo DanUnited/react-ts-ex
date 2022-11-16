@@ -1,0 +1,7 @@
+version: '2'
+services:
+  wgm-admin-frontend:
+    build: .
+    ports:
+      - 9090:80
+      - 443:443

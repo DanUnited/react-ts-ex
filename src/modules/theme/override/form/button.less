@@ -1,0 +1,42 @@
+@import "~antd/es/style/themes/default";
+@import "../variables";
+
+@disabled-text-color: #94979B;
+
+body {
+  .ant-btn-primary[disabled],
+  .ant-btn-primary[disabled]:hover,
+  .ant-btn-primary[disabled]:focus,
+  .ant-btn-primary[disabled]:active {
+    color: @disabled-text-color;
+    background-color: @disabled-color;
+    border-color: @disabled-color;
+  }
+
+  .ant-btn {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+
+    &.ant-btn-primary {
+      padding: 0 16px;
+    }
+
+    &.ant-btn-lg {
+      height: 48px;
+
+      @media (max-width: @screen-xxl) {
+        height: 32px;
+        font-size: 14px;
+      }
+    }
+
+    &.ant-btn-sm {
+      @media (max-width: @screen-xxl) {
+        height: 24px;
+      }
+    }
+  }
+}

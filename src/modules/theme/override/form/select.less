@@ -1,0 +1,87 @@
+@import "~antd/es/style/themes/default";
+@import "../variables";
+
+@lg-select-height: 40px;
+
+body {
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-radius: 12px;
+    border-color: @border-color-base;
+    background-color: white;
+
+    .ant-select-selection-search-input {
+      &::placeholder {
+        color: @text-color;
+      }
+    }
+  }
+
+  .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+    height: @lg-select-height;
+
+    @media (max-width: @screen-xxl) {
+      height: @lg-select-height - 8;
+    }
+  }
+
+  .ant-select-single.ant-select-lg:not(.ant-select-customize-input):not(.ant-select-customize-input) .ant-select-selection-search-input {
+    height: @lg-select-height;
+
+    @media (max-width: @screen-xxl) {
+      height: @lg-select-height - 8;
+    }
+  }
+
+  .ant-select-multiple.ant-select-lg .ant-select-selection-search {
+    height: @lg-select-height - 8;
+    line-height: @lg-select-height - 8;
+
+    @media (max-width: @screen-xxl) {
+      height: @lg-select-height - 16;
+      line-height: @lg-select-height - 16;
+    }
+  }
+
+  .ant-select-multiple .ant-select-selector {
+    padding: 1px 4px;
+
+    @media (max-width: @screen-xxl) {
+      padding: 0 2px;
+    }
+  }
+
+  .ant-select-multiple.ant-select-lg .ant-select-selection-item {
+    height: 32px;
+    line-height: 32px;
+
+    @media (max-width: @screen-xxl) {
+      height: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .ant-select-lg {
+    height: @lg-select-height;
+
+    @media (max-width: @screen-xxl) {
+      height: @lg-select-height - 8;
+      font-size: 14px;
+    }
+  }
+
+  .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector::after,
+  .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item,
+  .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-placeholder {
+    line-height: @lg-select-height - 2;
+
+    @media (max-width: @screen-xxl) {
+      line-height: @lg-select-height - 8 - 2;
+    }
+  }
+
+  @media (max-width: @screen-xxl) {
+    .ant-select-multiple.ant-select-lg .ant-select-selector::after {
+      line-height: 26px;
+    }
+  }
+}

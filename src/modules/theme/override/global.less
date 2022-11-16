@@ -1,0 +1,62 @@
+@import "variables";
+
+body {
+  font-family: @font-family !important;
+  font-feature-settings: @font-feature-settings-base !important;
+
+  a {
+    text-decoration: underline;
+    color: @text-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @text-color;
+  }
+
+  .ant-tooltip.close-event.ant-tooltip-placement-right .ant-tooltip-content .ant-tooltip-inner {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    border: 1px solid @red-color;
+    background-color: @chablis-color;
+    color: @red-color;
+  }
+
+  .ant-tooltip.event.ant-tooltip-placement-right .ant-tooltip-content .ant-tooltip-inner {
+    color: @primary-color;
+    background: @solitude-color;
+    border: 1px solid @primary-color;
+  }
+
+  .ant-tooltip.close-event.ant-tooltip-placement-right .ant-tooltip-content .ant-tooltip-arrow .ant-tooltip-arrow-content {
+    background-color: @red-color;
+  }
+
+  .ant-tooltip.event.ant-tooltip-placement-right .ant-tooltip-content .ant-tooltip-arrow .ant-tooltip-arrow-content {
+    background-color: @primary-color;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .ant-affix {
+    z-index: 11;
+  }
+
+  .react-resizable {
+    position: relative;
+  }
+
+  .react-resizable-handle {
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    bottom: 0;
+    right: -5px;
+    cursor: col-resize;
+  }
+}

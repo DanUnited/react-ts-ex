@@ -1,0 +1,35 @@
+@import "~antd/es/style/themes/default";
+@import "../variables";
+
+.ant-row {
+  &.ant-form-item {
+    margin-bottom: 12px;
+
+    &.compact {
+      margin-bottom: 3px;
+    }
+  }
+
+  @media (max-width: @screen-xxl) {
+    &.ant-form-item {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.ant-form-item-explain, .ant-form-item-extra {
+  margin-top: 0;
+}
+
+body {
+  .ant-form-large .ant-form-item-label > label {
+    height: auto;
+  }
+
+  .ant-form-large .ant-form-item-control-input {
+    @media (max-width: @screen-xxl) {
+      min-height: 24px;
+    }
+  }
+}
+

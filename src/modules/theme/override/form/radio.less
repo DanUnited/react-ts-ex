@@ -1,0 +1,26 @@
+@import "~antd/es/style/themes/default";
+@import "../variables";
+
+body {
+  .ant-radio-button-wrapper {
+    height: 40px;
+    font-size: 14px;
+    line-height: 38px;
+  }
+
+  .ant-radio-button-wrapper:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .ant-radio-button-wrapper:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+
+  @media (max-width: @screen-xxl) {
+    .ant-radio-button-wrapper {
+      height: 32px;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}

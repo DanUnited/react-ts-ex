@@ -1,0 +1,68 @@
+import { renderPresetsInput, renderRangedInput } from 'components/table/renders';
+
+export const yieldsWeatherColumns = [
+  {
+    title: 'Utilization %',
+    dataIndex: 'utilization',
+    key: 'utilization',
+    sorter: false,
+    width: 180,
+    render: renderRangedInput,
+  },
+  {
+    title: '0',
+    dataIndex: '0',
+    key: 'zero',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+  {
+    title: '1',
+    dataIndex: '1',
+    key: 'one',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+  {
+    title: '2',
+    dataIndex: '2',
+    key: 'two',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+  {
+    title: '3',
+    dataIndex: '3',
+    key: 'three',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+  {
+    title: '4',
+    dataIndex: '4',
+    key: 'four',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+  {
+    title: '5',
+    dataIndex: '5',
+    key: 'five',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+  {
+    title: '5-15',
+    dataIndex: '5-15',
+    key: 'range',
+    sorter: false,
+    width: 128,
+    render: renderPresetsInput,
+  },
+];

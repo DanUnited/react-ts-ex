@@ -1,0 +1,32 @@
+@import "~antd/es/style/themes/default";
+@import "variables";
+
+@darkGrey: #68717B;
+@primary: #38A5FF;
+
+.ant-tabs-large > .ant-tabs-nav .ant-tabs-tab {
+  font-weight: 600;
+  line-height: 1.3;
+
+  .ant-tabs-tab-btn {
+    font-size: 24px;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active {
+    color: @primary;
+  }
+
+  @media (max-width: @screen-xxl) {
+    .ant-tabs-tab-btn {
+      font-size: 18px;
+    }
+  }
+}
+
+.ant-tabs-tab-btn:not(.ant-tabs-tab-active) {
+  color: @darkGrey;
+}
+
+.ant-tabs-ink-bar {
+  height: 4px;
+}

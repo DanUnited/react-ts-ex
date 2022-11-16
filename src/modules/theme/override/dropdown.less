@@ -1,0 +1,39 @@
+@import "~antd/es/style/themes/default";
+@import "variables";
+
+body {
+  .ant-dropdown-menu {
+    padding: 16px;
+    border-radius: 6px;
+
+    .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      color: @darkGrey;
+
+      svg {
+        height: 20px;
+        margin-right: 12px;
+        vertical-align: bottom;
+      }
+
+      &.ant-dropdown-menu-item-danger:hover svg {
+        fill: white;
+      }
+    }
+
+    @media (max-width: @screen-xxl) {
+      padding: 12px;
+
+      .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
+        font-size: 12px;
+      }
+
+      svg {
+        height: 12px;
+        margin-right: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "~antd/es/style/themes/default";
+@checkbox-size: 24px;
+
+body {
+  .ant-checkbox + span {
+    padding: 0 12px;
+    position: relative;
+    top: -4px;
+  }
+
+  .ant-checkbox-inner {
+    height: @checkbox-size;
+    width: @checkbox-size;
+    border-radius: 4px;
+    background-color: white;
+    &:after {
+      left: 25%;
+      width: 6px;
+      height: 14px;
+      top: 45%;
+    }
+  }
+
+  .ant-form-item input[type='radio'],
+  .ant-form-item input[type='checkbox'] {
+    height: @checkbox-size;
+    width: @checkbox-size;
+  }
+
+  @media (max-width: @screen-xxl) {
+    .ant-checkbox + span {
+      padding: 0 8px;
+      top: -1px;
+    }
+
+    .ant-checkbox-inner {
+      height: @checkbox-size - 8;
+      width: @checkbox-size - 8;
+
+      &:after {
+        width: 4px;
+        height: 8px;
+      }
+    }
+
+    .ant-form-item input[type='radio'],
+    .ant-form-item input[type='checkbox'] {
+      height: @checkbox-size - 8;
+      width: @checkbox-size - 8;
+    }
+  }
+}

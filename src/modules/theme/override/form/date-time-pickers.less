@@ -1,0 +1,65 @@
+@import "~antd/es/style/themes/default";
+@import "../variables";
+
+body {
+  .ant-picker {
+    border-radius: 4px;
+    border-color: @border-color-base;
+    background-color: white;
+    font-feature-settings: @font-feature-settings-base;
+
+    &.ant-picker-range {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 12px;
+    }
+
+    &.ant-picker-small {
+      height: 32px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &.ant-picker-large {
+      height: 40px;
+      border-radius: 12px;
+    }
+
+    .ant-picker-footer {
+      justify-content: right;
+      align-items: center;
+      display: flex;
+      height: 36px;
+    }
+  }
+
+  .ant-picker-dropdown {
+    font-feature-settings: @font-feature-settings-base;
+  }
+
+  @media (max-width: @screen-xxl) {
+    .ant-picker.ant-picker-range {
+      padding: 4px 8px;
+    }
+
+    .ant-picker-large {
+      padding: 2px 8px 2px;
+
+      .ant-picker-input > input {
+        font-size: 14px;
+      }
+    }
+
+    .ant-picker {
+      &.ant-picker-large {
+        height: 32px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .ant-picker-time-panel-column::after {
+    height: 0;
+  }
+}
