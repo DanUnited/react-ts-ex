@@ -37,8 +37,6 @@ const PricingManagementPaths: Record<PriceManagementTabsEnum, LoadableComponent<
   [PriceManagementTabsEnum.WEATHER]: YieldManagementTab,
 };
 
-const { TabPane } = Tabs;
-
 const getNameByTab = (tabName: PriceManagementTabsEnum): string => {
   switch (tabName) {
     case PriceManagementTabsEnum.WEATHER:
@@ -125,14 +123,15 @@ export const PricingManagementPage = () => {
           size="large"
           onChange={onChangeTag}
           defaultActiveKey={activeTab}
-        >
-          <TabPane tab="Rate manager" key={PriceManagementTabsEnum.RATE}>
-            {getRenderComponent(PriceManagementTabsEnum.RATE)}
-          </TabPane>
-
-          <TabPane
-            tab={(
-              <>
+          items={[
+            {
+              label: 'Rate manager',
+              key: PriceManagementTabsEnum.RATE,
+              children: getRenderComponent(PriceManagementTabsEnum.RATE)
+            },
+            {
+              key: PriceManagementTabsEnum.YIELD,
+              label: <>
                 Yield manager
                 <Divider type="vertical" />
                 <Switch
@@ -141,16 +140,12 @@ export const PricingManagementPage = () => {
                   onChange={onCourseYieldChange}
                   disabled={!hasCourseRights}
                 />
-              </>
-            )}
-            key={PriceManagementTabsEnum.YIELD}
-          >
-            {getRenderComponent(PriceManagementTabsEnum.YIELD)}
-          </TabPane>
-
-          <TabPane
-            tab={(
-              <>
+              </>,
+              children: getRenderComponent(PriceManagementTabsEnum.YIELD)
+            },
+            {
+              key: PriceManagementTabsEnum.WEATHER,
+              label: <>
                 Weather manager
                 <Divider type="vertical" />
                 <Switch
@@ -159,12 +154,11 @@ export const PricingManagementPage = () => {
                   onChange={onCourseWeatherChange}
                   disabled={!hasCourseRights}
                 />
-              </>
-            )}
-            key={PriceManagementTabsEnum.WEATHER}
-          >
-            {getRenderComponent(PriceManagementTabsEnum.WEATHER)}
-          </TabPane>
+              </>,
+              children: getRenderComponent(PriceManagementTabsEnum.WEATHER)
+            }
+          ]}
+        >
         </Tabs>
       </PagePlate>
     </>
